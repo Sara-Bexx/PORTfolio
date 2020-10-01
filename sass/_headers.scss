@@ -1,0 +1,26 @@
+.header {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    background: $main-blue;
+    box-shadow: $box-shadow;
+    
+    h1 {
+        font-size: 10rem;
+        text-align: center;
+        color: white;
+        font-weight: lighter;
+    }
+    p {
+        font-size: 2rem;
+        color: white;
+        font-style: italic;
+        text-align: center;
+    }
+}
+.page-container {
+    h2 {
+        font-size: 2.5rem;
+        text-decoration: underline;
+    }
+}

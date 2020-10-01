@@ -1,0 +1,99 @@
+// buttons and animations 
+.button-animations {
+    position: relative;
+     grid-column: 3 / 3;
+     grid-row: 2;
+ 
+.animation-buttons {
+    position: absolute;
+    top: 200px;
+    left: 190px;
+    transform: translate(-50%, -50%);
+}
+.btn {
+    position: relative;
+    display: block;
+    width: 20vw;
+    color: black;
+    font-size: 1.6rem; 
+    font-family: 'Poppins', sans-serif; 
+    text-decoration: none;
+    text-align: center;
+    box-shadow: $box-shadow;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: $button-border-radius;
+    padding: 1.4rem 4rem;
+    margin: 2rem;
+    overflow: hidden;
+    transition: 1s all ease;
+}
+.btn::before {
+    background-color: pink;
+    content: '';
+    position: absolute;
+    top: 180%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 1s ease;
+}
+%button-3-4-5-before {
+    width: 100%;
+    height: 0;
+    transform: translate(-50%,-50%) rotate(180deg);
+}
+%button-3-4-5-hover-before {
+    height: 380%;
+}
+%button-3-4-5-hover {
+    box-shadow: $hover-box-shadow;
+    font-weight: bolder;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+}
+.btn3::before {
+    @extend %button-3-4-5-before;
+}
+.btn3:hover::before {
+    @extend %button-3-4-5-hover-before;
+}
+.btn3:hover {
+   @extend %button-3-4-5-hover;
+   animation: colorchange 2s infinite;
+}
+.btn4::before {
+    @extend %button-3-4-5-before;
+}
+.btn4:hover::before {
+    @extend %button-3-4-5-hover-before;
+}
+.btn4:hover {
+   @extend %button-3-4-5-hover;
+   animation: colorchange2 2s infinite;
+}
+.btn5::before {
+    @extend %button-3-4-5-before;
+}
+.btn5:hover::before {
+    @extend %button-3-4-5-hover-before;
+}
+.btn5:hover {
+   @extend %button-3-4-5-hover;
+   animation: colorchange3 2s infinite;
+}
+
+@keyframes colorchange {
+    50% { background: transparent }
+    100% { background:  rgb(0, 172, 228) }
+  }
+@keyframes colorchange2 {
+    50% { background: transparent }
+    100% { background:  rgb(227, 76, 38) }
+  }
+@keyframes colorchange3 {
+    50% { background: transparent }
+    100% { background:  rgb(228, 161, 38) }
+  } 
+}
